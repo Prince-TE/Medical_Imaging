@@ -13,7 +13,7 @@ import genericUtility.ListImp;
 import genericUtility.WebDriverUtility;
 @Listeners(genericUtility.ListImp.class)
 
-
+//login test for superadmin
 public class LoginValidationTest extends BaseClass  {
 
 	@Test
