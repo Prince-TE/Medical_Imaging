@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-10T14:25:22 IST" name="Suite" finished-at="2024-07-10T14:28:47 IST" duration-ms="205554">
+  <suite started-at="2024-07-18T16:12:33 IST" name="Default suite" finished-at="2024-07-18T16:13:26 IST" duration-ms="53148">
     <groups>
     </groups>
-    <test started-at="2024-07-10T14:25:22 IST" name="Test" finished-at="2024-07-10T14:28:47 IST" duration-ms="205554">
-      <class name="LandingPageTest.HeaderValidationTest">
-        <test-method is-config="true" signature="startBrowser(java.lang.String)[pri:0, instance:LandingPageTest.HeaderValidationTest@1ed4ae0f]" started-at="2024-07-10T14:25:51 IST" name="startBrowser" finished-at="2024-07-10T14:26:52 IST" duration-ms="61275" status="PASS">
+    <test started-at="2024-07-18T16:12:33 IST" name="Default test" finished-at="2024-07-18T16:13:26 IST" duration-ms="53148">
+      <class name="loginTest.LogInWithInValidCredentials">
+        <test-method is-config="true" signature="startBrowser(java.lang.String)[pri:0, instance:loginTest.LogInWithInValidCredentials@7d0b7e3c]" started-at="2024-07-18T16:12:33 IST" name="startBrowser" finished-at="2024-07-18T16:12:52 IST" duration-ms="18813" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,78 +18,111 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method signature="headerValidation()[pri:0, instance:LandingPageTest.HeaderValidationTest@1ed4ae0f]" started-at="2024-07-10T14:26:52 IST" name="headerValidation" finished-at="2024-07-10T14:28:46 IST" duration-ms="113711" status="PASS">
+        <test-method is-config="true" signature="initializePages()[pri:0, instance:loginTest.LogInWithInValidCredentials@7d0b7e3c]" started-at="2024-07-18T16:12:52 IST" name="initializePages" finished-at="2024-07-18T16:12:52 IST" duration-ms="57" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- headerValidation -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:LandingPageTest.HeaderValidationTest@1ed4ae0f]" started-at="2024-07-10T14:28:47 IST" name="closeBrowser" finished-at="2024-07-10T14:28:47 IST" duration-ms="447" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- LandingPageTest.HeaderValidationTest -->
-      <class name="LandingPageTest.LoginValidationTest">
-        <test-method is-config="true" signature="startBrowser(java.lang.String)[pri:0, instance:LandingPageTest.LoginValidationTest@51c668e3]" started-at="2024-07-10T14:25:22 IST" name="startBrowser" finished-at="2024-07-10T14:25:45 IST" duration-ms="23277" status="PASS">
+        </test-method> <!-- initializePages -->
+        <test-method signature="inValidCredentials(java.lang.String,java.lang.String)[pri:0, instance:loginTest.LogInWithInValidCredentials@7d0b7e3c]" started-at="2024-07-18T16:12:52 IST" name="inValidCredentials" data-provider="invalidCredentials" finished-at="2024-07-18T16:12:56 IST" duration-ms="4848" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[elton.dcuha1234@revealhealthtech.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Elton@10]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startBrowser -->
-        <test-method signature="superAdminLoginTest()[pri:0, instance:LandingPageTest.LoginValidationTest@51c668e3]" started-at="2024-07-10T14:25:45 IST" name="superAdminLoginTest" finished-at="2024-07-10T14:25:51 IST" duration-ms="5414" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at LandingPageTest.LoginValidationTest.superAdminLoginTest(LoginValidationTest.java:32)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- inValidCredentials -->
+        <test-method signature="inValidCredentials(java.lang.String,java.lang.String)[pri:0, instance:loginTest.LogInWithInValidCredentials@7d0b7e3c]" started-at="2024-07-18T16:12:57 IST" name="inValidCredentials" data-provider="invalidCredentials" finished-at="2024-07-18T16:13:02 IST" duration-ms="4662" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[elton.dcunha@revealhealthtech.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Elton123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- superAdminLoginTest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:LandingPageTest.LoginValidationTest@51c668e3]" started-at="2024-07-10T14:25:51 IST" name="closeBrowser" finished-at="2024-07-10T14:25:51 IST" duration-ms="410" status="PASS">
+        </test-method> <!-- inValidCredentials -->
+        <test-method signature="disablingLogInButton(java.lang.String,java.lang.String)[pri:0, instance:loginTest.LogInWithInValidCredentials@7d0b7e3c]" started-at="2024-07-18T16:13:02 IST" name="disablingLogInButton" data-provider="disableLogin" finished-at="2024-07-18T16:13:08 IST" depends-on-methods="loginTest.LogInWithInValidCredentials.inValidCredentials" duration-ms="5465" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[elton.dcunha@revealhealthtech]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disablingLogInButton -->
+        <test-method signature="disablingLogInButton(java.lang.String,java.lang.String)[pri:0, instance:loginTest.LogInWithInValidCredentials@7d0b7e3c]" started-at="2024-07-18T16:13:08 IST" name="disablingLogInButton" data-provider="disableLogin" finished-at="2024-07-18T16:13:13 IST" depends-on-methods="loginTest.LogInWithInValidCredentials.inValidCredentials" duration-ms="5519" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[elon.dcunha@revealhealthtech.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Elton@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disablingLogInButton -->
+        <test-method signature="disablingLogInButton(java.lang.String,java.lang.String)[pri:0, instance:loginTest.LogInWithInValidCredentials@7d0b7e3c]" started-at="2024-07-18T16:13:14 IST" name="disablingLogInButton" data-provider="disableLogin" finished-at="2024-07-18T16:13:19 IST" depends-on-methods="loginTest.LogInWithInValidCredentials.inValidCredentials" duration-ms="5372" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Elton@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disablingLogInButton -->
+        <test-method signature="disablingLogInButton(java.lang.String,java.lang.String)[pri:0, instance:loginTest.LogInWithInValidCredentials@7d0b7e3c]" started-at="2024-07-18T16:13:20 IST" name="disablingLogInButton" data-provider="disableLogin" finished-at="2024-07-18T16:13:25 IST" depends-on-methods="loginTest.LogInWithInValidCredentials.inValidCredentials" duration-ms="5538" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[elon.dcunha@revealhealthtech.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disablingLogInButton -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:loginTest.LogInWithInValidCredentials@7d0b7e3c]" started-at="2024-07-18T16:13:25 IST" name="closeBrowser" finished-at="2024-07-18T16:13:26 IST" duration-ms="378" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- LandingPageTest.LoginValidationTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- loginTest.LogInWithInValidCredentials -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
