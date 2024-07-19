@@ -1,20 +1,18 @@
 package LandingPageTest;
 
 import org.openqa.selenium.By;
+
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 
 import POM.LandingPage;
-import genericUtility.BaseClass;
 import genericUtility.ListImp;
 import genericUtility.WebDriverUtility;
-@Listeners(genericUtility.ListImp.class)
-
+import genericUtility.*;
 //login test for superadmin
-public class LoginValidationTest extends BaseClass  {
+public class LoginValidationTest extends BasePage  {
 
 	@Test
 	public void superAdminLoginTest() throws Throwable {

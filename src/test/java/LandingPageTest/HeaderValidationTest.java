@@ -16,11 +16,12 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 
 import POM.LandingPage;
 import genericUtility.BaseClass;
+import genericUtility.BasePage;
 import genericUtility.ListImp;
 import genericUtility.WebDriverUtility;
 
 @Listeners(genericUtility.ListImp.class)
-public class HeaderValidationTest extends BaseClass{
+public class HeaderValidationTest extends BasePage{
 		
 		@Test
 		public void headerValidation() throws Throwable {
