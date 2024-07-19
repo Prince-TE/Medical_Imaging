@@ -15,7 +15,7 @@ import testData.Login;
 
 public class LogInWithInValidCredentials extends BasePage {
 	
-	SoftAssert s = new SoftAssert();
+	SoftAssert s = new SoftAssert(); //assertion
 	
 	@Test(dataProvider = "invalidCredentials", dataProviderClass = Login.class)
 	public void inValidCredentials(String email, String password) throws Throwable {
