@@ -46,9 +46,31 @@ public class HomePage {
 	@FindBy(xpath = "(//div[@id='cardHeader'])[3]")
 	private WebElement cardHeader3;
 	
+	@FindBy(xpath = "//ul[@id='primaryNavigationList']")
+	private WebElement header;
+	
+	@FindBy(xpath = "//span[@id='forgotPasswordBtn']")
+	private WebElement forgotPassLink;
+	
+	@FindBy(xpath = "//h1[contains(text(),'Forgot Password?')]")
+	private WebElement forgotPassText;
+	
+	
 
 
-    public void clickLogInButton() {
+    public WebElement getForgotPassText() {
+		return forgotPassText;
+	}
+
+	public WebElement getForgotPassLink() {
+		return forgotPassLink;
+	}
+
+	public WebElement getHeader() {
+		return header;
+	}
+
+	public void clickLogInButton() {
         logInButton.click();
     }
     
