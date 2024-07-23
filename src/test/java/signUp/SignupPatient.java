@@ -1,10 +1,8 @@
 package signUp;
 
 import genericUtility.BasePage;
-<<<<<<< HEAD
 import org.testng.Assert;
-=======
->>>>>>> d77b5611c3a47f1c9f4ed17aa6c97850a061e91c
+
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -17,24 +15,18 @@ import testData.*;
 
 public class SignupPatient extends BasePage {
 
-<<<<<<< HEAD
 	//SoftAssert softAssert = new SoftAssert();
-=======
 	SoftAssert softAssert = new SoftAssert();
->>>>>>> d77b5611c3a47f1c9f4ed17aa6c97850a061e91c
 
 	@Test(priority = 2,dataProvider = "patientInfo & contactInformation", dataProviderClass = PatientEnrollment.class)
 	public void completingTheAssessmentForEligiblePatient(String firstName,String lastName,String ohip,
 								   String mrn,String email,String mobile,String createPass, String confirmPass,String otp) throws Throwable {
-<<<<<<< HEAD
 
 			home.clickLogo();
 			home.clickSignUp();
-=======
-		
+
 			
 		    home.clickSignUp();
->>>>>>> d77b5611c3a47f1c9f4ed17aa6c97850a061e91c
 			enroll.setFirstName(firstName);
 			enroll.setLastName(lastName);
 			enroll.setOhip(ohip);
@@ -96,12 +88,8 @@ public class SignupPatient extends BasePage {
 		enroll.clickNext();
 		enroll.clickYes();//Q7
 		enroll.clickSubmit();
-<<<<<<< HEAD
 		//softAssert.assertEquals(enroll.getThankYou().getText(),PatientEnrollmentString.InEligibleThankyou_Text);
 		Assert.assertTrue(enroll.getThankYou().getText().contains(PatientEnrollmentString.InEligibleThankyou_Text));
-=======
-		softAssert.assertEquals(enroll.getThankYou().getText(),PatientEnrollmentString.InEligibleThankyou_Text);
->>>>>>> d77b5611c3a47f1c9f4ed17aa6c97850a061e91c
 	}
 
 	
