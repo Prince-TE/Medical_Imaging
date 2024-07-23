@@ -14,7 +14,7 @@ public class ExcelUtility {
 
 public String getDataFromExcel(String sheetName , int rowNum , int celNum) throws Throwable {
 		
-		FileInputStream fis = new FileInputStream("C:/Users/Prince Kumar/Desktop/TestScriptData.xlsx");
+		FileInputStream fis = new FileInputStream("https://revealhealthtech.sharepoint.com/:x:/r/sites/MI/Shared%20Documents/testData.xlsx?d=wfdf6f012abf64a30b7eedbca44abc3de&csf=1&web=1&e=wJL2bw");
 		Workbook wb =  WorkbookFactory.create(fis);
 	    String data = wb.getSheet(sheetName).getRow(rowNum).getCell(celNum).getStringCellValue();
 	    wb.close();
@@ -22,7 +22,7 @@ public String getDataFromExcel(String sheetName , int rowNum , int celNum) throw
 	}
 
 public static Object[][] getMultipleDataFromExcel(String sheetName) throws Throwable {
-	FileInputStream fis = new FileInputStream("C:/Users/Prince Kumar/Desktop/TestScriptData.xlsx");
+	FileInputStream fis = new FileInputStream("https://revealhealthtech.sharepoint.com/:x:/r/sites/MI/Shared%20Documents/testData.xlsx?d=wfdf6f012abf64a30b7eedbca44abc3de&csf=1&web=1&e=wJL2bw");
 	Workbook book = WorkbookFactory.create(fis);
 	Sheet sheet = book.getSheet(sheetName);
 	DataFormatter df = new DataFormatter();
@@ -43,7 +43,7 @@ public static Object[][] getMultipleDataFromExcel(String sheetName) throws Throw
 
 	
 	public int getRowcount(String sheetName ) throws Throwable {
-		FileInputStream fis = new FileInputStream("./testdata/testScriptdata.xlsx");
+		FileInputStream fis = new FileInputStream("https://revealhealthtech.sharepoint.com/:x:/r/sites/MI/Shared%20Documents/testData.xlsx?d=wfdf6f012abf64a30b7eedbca44abc3de&csf=1&web=1&e=wJL2bw");
 		Workbook wb =  WorkbookFactory.create(fis);
 		int rowCount = wb.getSheet(sheetName).getLastRowNum();
 		 wb.close();
@@ -51,11 +51,11 @@ public static Object[][] getMultipleDataFromExcel(String sheetName) throws Throw
 	}
 	
 	public void setDataIntoExcel(String sheetName , int rowNum , int celNum , String data) throws EncryptedDocumentException, IOException {
-		FileInputStream fis = new FileInputStream("./testdata/testScriptdata.xlsx");
+		FileInputStream fis = new FileInputStream("https://revealhealthtech.sharepoint.com/:x:/r/sites/MI/Shared%20Documents/testData.xlsx?d=wfdf6f012abf64a30b7eedbca44abc3de&csf=1&web=1&e=wJL2bw");
 		Workbook wb =  WorkbookFactory.create(fis);
 		wb.getSheet(sheetName).getRow(rowNum).createCell(celNum);
 		
-		FileOutputStream fos = new FileOutputStream("./testdata/testScriptdata.xlsx");
+		FileOutputStream fos = new FileOutputStream("https://revealhealthtech.sharepoint.com/:x:/r/sites/MI/Shared%20Documents/testData.xlsx?d=wfdf6f012abf64a30b7eedbca44abc3de&csf=1&web=1&e=wJL2bw");
 		wb.write(fos);
 		wb.close();
 	} 

@@ -1,6 +1,6 @@
 package stringConstants;
 
-public class PatientEnrollment {
+public class PatientEnrollmentString {
 	
 	public static final String patientInformation_Text = "Patient Information";
 	public static final String verifyDetails_Text = "Please verify your details";
@@ -18,5 +18,5 @@ public class PatientEnrollment {
 	public static final String question5_Text = "5. Have you been tested for the BRCA1/BRCA2 gene, and if so, do you know the results of the test?*";
 	public static final String question6_Text = "6. Have you ever used hormone therapy to manage menopause symptoms or other health conditions?*";
 	public static final String question7_Text = "7. Have you ever undergone fertility treatment known as In Vitro Fertilization (IVF)?*";
-
+	public static final String InEligibleThankyou_Text = "Thank you for your submission.";
 }

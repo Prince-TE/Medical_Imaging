@@ -48,6 +48,11 @@ public class PatientEnrollmentPage {
 	
 	@FindBy(id = "enrollNo")
 	private WebElement noButton;
+
+	@FindBy(id = "enrollPositive")
+	private WebElement positiveButton;
+	@FindBy(id = "enrollNegative")
+	private WebElement negativeButton;
 	
 	@FindBy(id = "enrollSubmit")
 	private WebElement submitButton;
@@ -71,9 +76,7 @@ public class PatientEnrollmentPage {
 	private WebElement thankYou;
 	
 	
-	public WebElement getFirstName() {
-		return firstName;
-	}
+	public WebElement getFirstName() {return firstName;}
 	public WebElement getLastName() {
 		return lastName;
 	}
@@ -144,6 +147,7 @@ public class PatientEnrollmentPage {
 	public void setConfirmPassword(String confirmPass) {
 		confirmPassword.sendKeys(confirmPass);
 	}
+	public void setOtp(String otp){otpTextfield.sendKeys(otp);}
 	
 	public void clickNext() {
 		nextButton.click();
@@ -157,6 +161,8 @@ public class PatientEnrollmentPage {
 	public void clickNo() {
 		noButton.click();
 	}
+	public void clickPositive(){positiveButton.click();}
+	public void clickNegative(){negativeButton.click();}
 	public void clickSubmit() {
 		submitButton.click();
 	}
