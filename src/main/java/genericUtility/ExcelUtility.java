@@ -14,7 +14,7 @@ public class ExcelUtility {
 
 public String getDataFromExcel(String sheetName , int rowNum , int celNum) throws Throwable {
 		
-		FileInputStream fis = new FileInputStream("C:/Users/Prince Kumar/Desktop/TestScriptData.xlsx");
+		FileInputStream fis = new FileInputStream("https://revealhealthtech.sharepoint.com/:x:/r/sites/MI/Shared%20Documents/testData.xlsx?d=wfdf6f012abf64a30b7eedbca44abc3de&csf=1&web=1&e=wJL2bw");
 		Workbook wb =  WorkbookFactory.create(fis);
 	    String data = wb.getSheet(sheetName).getRow(rowNum).getCell(celNum).getStringCellValue();
 	    wb.close();
