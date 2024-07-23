@@ -1,6 +1,7 @@
 package signUp;
 
 import genericUtility.BasePage;
+import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -13,14 +14,14 @@ import testData.*;
 
 public class SignupPatient extends BasePage {
 
-	SoftAssert softAssert = new SoftAssert();
+	//SoftAssert softAssert = new SoftAssert();
 
 	@Test(priority = 2,dataProvider = "patientInfo & contactInformation", dataProviderClass = PatientEnrollment.class)
 	public void completingTheAssessmentForEligiblePatient(String firstName,String lastName,String ohip,
 								   String mrn,String email,String mobile,String createPass, String confirmPass,String otp) throws Throwable {
-		
-			
-		    home.clickSignUp();
+
+			home.clickLogo();
+			home.clickSignUp();
 			enroll.setFirstName(firstName);
 			enroll.setLastName(lastName);
 			enroll.setOhip(ohip);
@@ -82,7 +83,8 @@ public class SignupPatient extends BasePage {
 		enroll.clickNext();
 		enroll.clickYes();//Q7
 		enroll.clickSubmit();
-		softAssert.assertEquals(enroll.getThankYou().getText(),PatientEnrollmentString.InEligibleThankyou_Text);
+		//softAssert.assertEquals(enroll.getThankYou().getText(),PatientEnrollmentString.InEligibleThankyou_Text);
+		Assert.assertTrue(enroll.getThankYou().getText().contains(PatientEnrollmentString.InEligibleThankyou_Text));
 	}
 
 	

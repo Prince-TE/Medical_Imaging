@@ -25,7 +25,7 @@ public class BaseClass {
 	public static WebDriver sDriver;
 	
 	@Parameters("browser")
-	@BeforeTest(alwaysRun = true)
+	@BeforeMethod(alwaysRun = true)
 	public void startBrowser(@Optional("chrome") String browser) {
 		
 		if(browser.equalsIgnoreCase("chrome")) {
@@ -54,7 +54,7 @@ public class BaseClass {
 		}
 	}
 	
-	@AfterTest(alwaysRun = true)
+	@AfterMethod(alwaysRun = true)
 	public void closeBrowser() {
 		driver.quit();
 	}
