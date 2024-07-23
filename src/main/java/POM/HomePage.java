@@ -57,6 +57,8 @@ public class HomePage {
 	
 	@FindBy (xpath = "//span[@id='backToLoginBtn']")
 	private WebElement backToLoginLink;
+	@FindBy(xpath = "//img[@alt=\"Logo\"]")
+	private WebElement logo;
 	
 	
 
@@ -79,6 +81,10 @@ public class HomePage {
 
 	public WebElement getHeader() {
 		return header;
+	}
+
+	public void clickLogo(){
+		logo.click();
 	}
 
 	public void clickLogInButton() {
@@ -108,7 +114,7 @@ public class HomePage {
 	public WebElement getPasswordPlaceholder() {
 		return PasswordPlaceholder;
 	}
-	
+
 	public String getInvalidCredentialsErrorMessage() {
 		return InvalidCredentialsErrorMessage.getText();
 	}
@@ -156,172 +162,6 @@ public class HomePage {
 		EmailIDTextField.clear();
 		PasswordTextField.clear();
 	}
-	
-	
-	
-
-//	public WebElement getInvalidDOB() {
-//		return InvalidDOB;
-//	}
-//
-//	public WebElement getFirstnameTxtbx() {
-//		return FirstnameTxtbx;
-//	}
-//
-//
-//	public WebElement getLastNameTxtbx() {
-//		return LastNameTxtbx;
-//	}
-//
-//
-//	public WebElement getDOBTxtbx() {
-//		return DOBTxtbx;
-//	}
-//
-//
-//	public WebElement getPhoneNumberTxtbx() {
-//		return PhoneNumberTxtbx;
-//	}
-//
-//
-//	public WebElement getEmailtxtbx() {
-//		return Emailtxtbx;
-//	}
-//
-//
-//	public WebElement getInfotext1() {
-//		return Infotext1;
-//	}
-//
-//
-//	public WebElement getInfotext2() {
-//		return Infotext2;
-//	}
-//
-//
-//	public WebElement getFirstnametxt() {
-//		return Firstnametxt;
-//	}
-//
-//
-//	public WebElement getLastnametxt() {
-//		return Lastnametxt;
-//	}
-//
-//
-//	public WebElement getDOBtxt() {
-//		return DOBtxt;
-//	}
-//
-//
-//	public WebElement getPhonenumbertxt() {
-//		return Phonenumbertxt;
-//	}
-//
-//
-//	public WebElement getEmailtxt() {
-//		return Emailtxt;
-//	}
-//
-//
-//	public WebElement getInvalidDOBError() {
-//		return InvalidDOBError;
-//	}
-//
-//
-//	public WebElement getInvalidEmail() {
-//		return InvalidEmail;
-//	}
-//
-//
-//	public LogIn_POM(WebDriver driver)
-//	{
-//		PageFactory.initElements(driver, this);
-//	}
-
-
-//	public WebElement getContactInformation() {
-//		return ContactInformation;
-//	}
-//
-//
-//	public void setContactInformation(WebElement contactInformation) {
-//		ContactInformation = contactInformation;
-//	}
-//
-//
-//	public void setFirstnameTxtbx(String FN) {
-//		FirstnameTxtbx.sendKeys(FN);
-//	}
-//
-//
-//	public void setLastNameTxtbx(String LN) {
-//		LastNameTxtbx.sendKeys(LN);
-//	}
-//
-//
-//	public void setDOBTxtbx(String DateofBirth) {
-//		DOBTxtbx.sendKeys(DateofBirth);
-//	}
-//
-//
-//	public void setPhoneNumberTxtbx(String PhoneNumber) {
-//		PhoneNumberTxtbx.sendKeys(PhoneNumber);
-//	}
-//
-//
-//	public void setEmailtxtbx(String Email) {
-//		Emailtxtbx.sendKeys(Email);
-//	}
-//	
-//	
-//
-//	public WebElement getInvalidEMail() {
-//		return InvalidEMail;
-//	}
-//
-//
-//	public void clearData() {
-//		DOBTxtbx.clear();
-//		Emailtxtbx.clear();
-//		PhoneNumberTxtbx.clear();
-//	}
-//	public void getNextButton() throws InterruptedException {
-//		Thread.sleep(3000);
-//	NextButton.click();
-//	}
-//	
-//	public WebElement getPhoneNumberError() {
-//		return PhoneNumberError;
-//	}
-//	
-//	public By Emailtxbx() {
-//		return By.cssSelector("#Input_EmailAddress");
-//	}
-//
-//	public WebElement getCalendar() {
-//		return Calendar;
-//	}
-//
-//	public void setCalendar(WebElement calendar) {
-//		Calendar = calendar;
-//	}
-//
-//	public WebElement getDate() {
-//		return date;
-//	}
-//
-//	public void setDate(WebElement date) {
-//		this.date = date;
-//	}
-//
-//	public WebElement getSetDate() {
-//		return SetDate;
-//	}
-//
-//	public void setSetDate(WebElement setDate) {
-//		SetDate = setDate;
-//	}
 	
 	
 	
