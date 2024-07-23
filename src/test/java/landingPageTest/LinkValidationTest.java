@@ -20,7 +20,7 @@ import genericUtility.WebDriverUtility;
 @Listeners(genericUtility.ListImp.class)
 public class LinkValidationTest extends BasePage{
 
-	@Test
+	@Test(priority = 1)
 	public void headerLinkValidation() throws InterruptedException {
 		WebElement header = home.getHeader();
 		List<WebElement> links = header.findElements(By.tagName("a"));
@@ -44,12 +44,20 @@ public class LinkValidationTest extends BasePage{
 			driver.switchTo().window(parent);
 	}
 }
-	@Test
+	@Test(priority = 2)
 	public void forgotPassLinkValidation() {
 		home.getForgotPassLink().click();
 		WebDriverUtility.waitForElementPresent(driver, home.getForgotPassText());
 		Assert.assertTrue(home.getForgotPassText().getText().toLowerCase().contains("forgot"));
-		ListImp.test.info("Forgot Password Page Displayed", MediaEntityBuilder.createScreenCaptureFromBase64String(WebDriverUtility.getScreenshotAsBase64(driver)).build());
+		ListImp.test.info("Forgot Password Page is Displayed", MediaEntityBuilder.createScreenCaptureFromBase64String(WebDriverUtility.getScreenshotAsBase64(driver)).build());
+	}
+	
+	@Test(priority = 3)
+	public void backToLoginLinkValidation() {
+		home.getBackToLoginLink().click();
+		WebDriverUtility.waitForElementPresent(driver, home.getLogInButton());
+		Assert.assertTrue(home.getLogInButton().getText().toLowerCase().contains("log in"));
+		ListImp.test.info("Login/Landing Page is Displayed", MediaEntityBuilder.createScreenCaptureFromBase64String(WebDriverUtility.getScreenshotAsBase64(driver)).build());
 	}
 	
 }

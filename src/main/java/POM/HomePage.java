@@ -55,10 +55,21 @@ public class HomePage {
 	@FindBy(xpath = "//h1[contains(text(),'Forgot Password?')]")
 	private WebElement forgotPassText;
 	
+	@FindBy (xpath = "//span[@id='backToLoginBtn']")
+	private WebElement backToLoginLink;
+	
 	
 
 
-    public WebElement getForgotPassText() {
+    public WebElement getLogInButton() {
+		return logInButton;
+	}
+
+	public WebElement getBackToLoginLink() {
+		return backToLoginLink;
+	}
+
+	public WebElement getForgotPassText() {
 		return forgotPassText;
 	}
 
