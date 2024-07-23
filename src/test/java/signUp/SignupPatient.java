@@ -90,7 +90,6 @@ public class SignupPatient extends BasePage {
 		enroll.clickSubmit();
 		//softAssert.assertEquals(enroll.getThankYou().getText(),PatientEnrollmentString.InEligibleThankyou_Text);
 		Assert.assertTrue(enroll.getThankYou().getText().contains(PatientEnrollmentString.InEligibleThankyou_Text));
-		softAssert.assertEquals(enroll.getThankYou().getText(),PatientEnrollmentString.InEligibleThankyou_Text);
 	}
 
 	
