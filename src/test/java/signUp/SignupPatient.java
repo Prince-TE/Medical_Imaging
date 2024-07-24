@@ -2,7 +2,6 @@ package signUp;
 
 import genericUtility.BasePage;
 import org.testng.Assert;
-
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -25,7 +24,6 @@ public class SignupPatient extends BasePage {
 			home.clickLogo();
 			home.clickSignUp();
 
-			
 		    home.clickSignUp();
 			enroll.setFirstName(firstName);
 			enroll.setLastName(lastName);

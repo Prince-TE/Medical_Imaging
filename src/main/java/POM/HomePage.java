@@ -121,7 +121,7 @@ public class HomePage {
 	
 	
 	public void setEmail(String emailID) {
-		EmailIDTextField.sendKeys(emailID);
+		getEMail().sendKeys(emailID);
 	}
 	
 	
