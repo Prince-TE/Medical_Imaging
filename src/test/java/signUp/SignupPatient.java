@@ -24,7 +24,6 @@ public class SignupPatient extends BasePage {
 			home.clickLogo();
 			home.clickSignUp();
 
-			
 		    home.clickSignUp();
 			enroll.setFirstName(firstName);
 			enroll.setLastName(lastName);
