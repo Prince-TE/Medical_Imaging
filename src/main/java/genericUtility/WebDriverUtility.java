@@ -4,10 +4,7 @@ import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -95,6 +92,15 @@ public class WebDriverUtility {
 	public void doubleclick(WebDriver driver , WebElement element) {
 		Actions act = new Actions(driver);
 		act.doubleClick(element).perform();
+	}
+
+	public void selectAll(WebDriver driver , WebElement element){
+		Actions act = new Actions(driver);
+		act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).perform();
+	}
+
+	public void backspace(WebDriver driver, WebElement element){
+		element.sendKeys(Keys.BACK_SPACE);
 	}
 	
 	public static String getScreenshotAsBase64(WebDriver driver) {
