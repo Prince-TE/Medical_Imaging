@@ -2,7 +2,7 @@ package stringConstants;
 
 public class LandingPage {
 	
-	public static final String activePreventionProgram_titleText = "Active Prevention Program";
+	public static final String activePreventionProgram_titleText = "ACTIVE PREVENTION PROGRAM";
 	public static final String welcomeHeader_titleText = "Active Prevention Program";
 	public static final String visionHeader_titleText = "Our Vision";
 	public static final String cardHeader1_titleText = "Enhanced Wellness Paths";
