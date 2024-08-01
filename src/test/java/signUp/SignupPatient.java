@@ -9,10 +9,6 @@ import stringConstants.PatientEnrollmentString;
 import testData.*;
 
 @Listeners(genericUtility.ListImp.class)
-
-qa
-
-
 public class SignupPatient extends BasePage {
 
 	//SoftAssert softAssert = new SoftAssert();
