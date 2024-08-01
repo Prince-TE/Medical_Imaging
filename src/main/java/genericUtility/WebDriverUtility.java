@@ -108,4 +108,9 @@ public class WebDriverUtility {
 		String filePath = ts.getScreenshotAs(OutputType.BASE64);
 		return filePath;
 	}
+	
+	public static void scrollToElement(WebDriver driver,WebElement ele) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("argumnets[0].scrollIntoView(true)", ele);
+	}
 }

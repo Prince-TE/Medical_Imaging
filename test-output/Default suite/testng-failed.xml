@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="LandingPageTest.LoginValidationTest">
+      <class name="landingPageTest.TextValidationTest">
         <methods>
-          <include name="superAdminLoginTest"/>
+          <include name="initializePages"/>
           <include name="startBrowser"/>
+          <include name="headTextValidation"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- LandingPageTest.LoginValidationTest -->
+      </class> <!-- landingPageTest.TextValidationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
