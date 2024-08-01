@@ -18,6 +18,13 @@ public class ASPManagerHomePage {
     private WebElement helpSupportLink;
     @FindBy(xpath = "//div[normalize-space()=\"Logout\"]")
     private WebElement logout;
+    @FindBy(id = "LogoutModalBtn")
+    private WebElement confirmLogout;
+
+    @FindBy(id = "CancelBtn")
+    private WebElement cancelLogout;
+    @FindBy(id = "closeModal")
+    private WebElement closeLogoutPopUp;
     @FindBy(id="offTrackPatients")
     private WebElement totalOffTrackPatients;
 
@@ -40,6 +47,19 @@ public class ASPManagerHomePage {
     @FindBy(xpath = "//input[@placeholder=\"MMMM YYYY\"]")
     private WebElement calendarDateField;
 
+    @FindBy(id = "notificationIcon")
+    private WebElement notificationIcon;
+    @FindBy(xpath = "//div[@class='text-sm font-normal text-textSecondary']")
+    private WebElement patientStatusDistributionDropdown;
+    @FindBy(xpath = "//ul[@id=\"hoverMenuItemsParent\"]/li[1]")
+    private WebElement sevenDays;
+
+    @FindBy(xpath = "//ul[@id=\"hoverMenuItemsParent\"]/li[2]")
+    private WebElement monthly;
+    @FindBy(xpath = "//ul[@id=\"hoverMenuItemsParent\"]/li[3]")
+    private WebElement quarterly;
+    @FindBy(xpath = "//ul[@id=\"hoverMenuItemsParent\"]/li[4]")
+    private WebElement yearly;
     public WebElement getHomeTab() {
         return homeTab;
     }
@@ -99,8 +119,44 @@ public class ASPManagerHomePage {
     public WebElement getCalendarDateField() {
         return calendarDateField;
     }
+    public WebElement getNotificationIcon() {
+        return notificationIcon;
+    }
+    public WebElement getPatientStatusDistributionDropdown() {
+        return patientStatusDistributionDropdown;
+    }
+
+    public WebElement getSevenDays() {
+        return sevenDays;
+    }
+
+    public WebElement getMonthly() {
+        return monthly;
+    }
+
+    public WebElement getQuarterly() {
+        return quarterly;
+    }
+
+    public WebElement getYearly() {
+        return yearly;
+    }
+    public WebElement getConfirmLogout() {
+        return confirmLogout;
+    }
+
+    public WebElement getCancelLogout() {
+        return cancelLogout;
+    }
+
+    public WebElement getCloseLogoutPopUp() {
+        return closeLogoutPopUp;
+    }
     public void setCalendarDateField(String calendarDateField) {
         getCalendarDateField().sendKeys(calendarDateField);
+    }
+    public void clickNotificationIcon(){
+        getNotificationIcon().click();
     }
     public ASPManagerHomePage(WebDriver driver)
     {
