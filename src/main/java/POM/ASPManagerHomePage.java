@@ -1,9 +1,12 @@
 package POM;
 
+import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public class ASPManagerHomePage {
     @FindBy(xpath = "//a[@class=\"m-2.5 flex items-center gap-2 rounded-md bg-lightLogoColor text-logoColor p-2 font-medium hover:bg-lightLogoColor active\"]")
@@ -30,7 +33,7 @@ public class ASPManagerHomePage {
 
     @FindBy(id = "atRiskPatients")
     private WebElement atRiskPatients;
-    @FindBy(id = "onTrackPatients")
+    @FindBy(id = "onTrackBtn")
     private WebElement onTrackPatients;
     @FindBy(id = "managePatientsBtn")
     private WebElement managePatientsButtonUnderPatientStatus;
@@ -60,6 +63,50 @@ public class ASPManagerHomePage {
     private WebElement quarterly;
     @FindBy(xpath = "//ul[@id=\"hoverMenuItemsParent\"]/li[4]")
     private WebElement yearly;
+    @FindBy(id = "dashboardRow0")
+    private WebElement patientFirstRow;
+
+    ///////////////////////////////////STAGE OVERVIEW////////////////////////////////////////////////
+    @FindBy(id = "scheduleMammogramBtn")
+    private WebElement scheduleMammogramButton;
+    public void clickScheduleMammogramButton(){
+        scheduleMammogramButton.click();
+    }
+    @FindBy(id = "editDateBtn")
+    private WebElement editDateButton;
+    public void clickEditDate(){
+        editDateButton.click();
+    }
+    @FindBy(xpath = "//button[@type='button']//*[name()='svg']")
+    private WebElement calendarIcon;
+    public void clickOnCalendarIcon(){
+        calendarIcon.click();
+    }
+    @Getter
+    @FindBy(xpath = "//div[@class=\"MuiPickersFadeTransitionGroup-root css-1bx5ylf\"]")
+    private WebElement calendarDateDropdown;
+    @FindBy(xpath = "//div[@class=\"MuiPickersYear-root css-1p8hrm8\"]/button")
+    List<WebElement> year;
+    public List<WebElement> getYear(){
+        return year;
+    }
+    @FindBy(xpath = "//div[@class=\"MuiPickersMonth-root css-1t72fib\"]")
+    List<WebElement> month;
+    public List<WebElement> getMonth(){
+        return month;
+    }
+    @FindBy(xpath = "//div[@role=\"rowgroup\"]/div/button")
+     List<WebElement> day;
+    public List<WebElement> getDay(){
+        return day;
+    }
+    @FindBy(xpath = "//div[@class=\"ml-auto mt-auto text-base font-semibold\"]/div[@xpath=\"1\"]")
+    private WebElement mammogramDate;
+
+    public String getMammogramDate() {
+        return mammogramDate.getText();
+    }
+
     public WebElement getHomeTab() {
         return homeTab;
     }
@@ -152,6 +199,7 @@ public class ASPManagerHomePage {
     public WebElement getCloseLogoutPopUp() {
         return closeLogoutPopUp;
     }
+    public WebElement getPatientFirstRow(){return patientFirstRow;}
     public void setCalendarDateField(String calendarDateField) {
         getCalendarDateField().sendKeys(calendarDateField);
     }

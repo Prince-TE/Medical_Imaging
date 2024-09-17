@@ -1,5 +1,6 @@
 package signUp;
 
+import POM.PatientEnrollmentPage;
 import genericUtility.BasePage;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
@@ -7,6 +8,8 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import stringConstants.PatientEnrollmentString;
 import testData.*;
+
+import javax.swing.text.StringContent;
 
 @Listeners(genericUtility.ListImp.class)
 public class SignupPatient extends BasePage {
@@ -41,7 +44,7 @@ public class SignupPatient extends BasePage {
 			enroll.clickNext();
 			enroll.clickNo();//Q4
 			enroll.clickNext();
-			enroll.clickPositive();//Q5
+			enroll.clickNegative();//Q5
 			enroll.clickNext();
 			enroll.clickNo();//Q6
 			enroll.clickNext();
@@ -49,6 +52,7 @@ public class SignupPatient extends BasePage {
 			enroll.clickSubmit();
 			enroll.setOtp(otp);
 			enroll.clickVerify();
+			softAssert.assertEquals(enroll.getWelcomeToAPPText(),PatientEnrollmentString.welcomeToAPPText);
 	}
 
 	@Test(priority = 1,dataProvider = "patientInfo & contactInformation", dataProviderClass = PatientEnrollment.class)
@@ -76,7 +80,7 @@ public class SignupPatient extends BasePage {
 		enroll.clickNext();
 		enroll.clickYes();//Q4
 		enroll.clickNext();
-		enroll.clickNegative();//Q5
+		enroll.clickPositive();//Q5
 		enroll.clickNext();
 		enroll.clickYes();//Q6
 		enroll.clickNext();

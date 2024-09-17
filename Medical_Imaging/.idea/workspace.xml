@@ -4,15 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c57cfe65-603d-4b23-b36f-8a2963af5174" name="Changes" comment="" />
+    <list default="true" id="c57cfe65-603d-4b23-b36f-8a2963af5174" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../src/main/java/genericUtility/GetCurrentDate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/testData/Calendar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/test/java/StageOverview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/POM/ASPManagerHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/POM/ASPManagerHomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/POM/PatientEnrollmentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/POM/PatientEnrollmentPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/stringConstants/PatientEnrollmentString.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/stringConstants/PatientEnrollmentString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/testData/PatientEnrollment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/testData/PatientEnrollment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/test/java/signUp/SignupPatient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/test/java/signUp/SignupPatient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/genericUtility/WebDriverUtility.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/genericUtility/WebDriverUtility.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2jSiRaigR8Rlo0JL4fQtDtEKaFR" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -23,7 +36,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Dell/Documents/Medical_Imaging",
+    "git-widget-placeholder": "Stage__Overview",
+    "last_opened_file_path": "C:/Users/elton.dcunha",
     "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>

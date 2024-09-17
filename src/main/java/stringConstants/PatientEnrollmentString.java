@@ -19,4 +19,5 @@ public class PatientEnrollmentString {
 	public static final String question6_Text = "6. Have you ever used hormone therapy to manage menopause symptoms or other health conditions?*";
 	public static final String question7_Text = "7. Have you ever undergone fertility treatment known as In Vitro Fertilization (IVF)?*";
 	public static final String InEligibleThankyou_Text = "Thank you for your submission.";
+	public static final String welcomeToAPPText = "Welcome to the Active Prevention Program!";
 }

@@ -74,6 +74,9 @@ public class PatientEnrollmentPage {
 	
 	@FindBy(xpath = "//*[contains(text(),'Thank you')]")
 	private WebElement thankYou;
+
+	@FindBy(xpath = "//div[@id=\"root\"]/div/h2")
+	private WebElement welcomeToAPPText;
 	
 	
 	public WebElement getFirstName() {return firstName;}
@@ -122,6 +125,7 @@ public class PatientEnrollmentPage {
 	public WebElement getOtpTextfield() {
 		return otpTextfield;
 	}
+
 	
 	public void setFirstName(String fn) {
 		firstName.sendKeys(fn);
@@ -171,6 +175,9 @@ public class PatientEnrollmentPage {
 	}
 	public void clickResendOtp() {
 		resendOTPLink.click();
+	}
+	public String getWelcomeToAPPText(){
+		return welcomeToAPPText.getText();
 	}
 	
 	public PatientEnrollmentPage(WebDriver driver)
