@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Sample Test Suite">
+    <test name="Login Tests">
+        <classes>
+            <class name="loginTest.LogInWithInValidCredentials">
+            <methods>
+                <include name="disablingLogInButton"/>
+                <exclude name="inValidCredentials"/>
+            </methods>
+            </class>
+            <!-- Add more classes here if needed -->
+        </classes>
+    </test>
+</suite>
